@@ -5,7 +5,7 @@
 //  Created by Rohan Aurora on 4/13/21.
 //
 
-import Foundation
+import UIKit
 
 struct Cars: Codable {
     
@@ -26,4 +26,40 @@ struct Cars: Codable {
     var model: String
     var prosList: [String]
     var rating: Int
+    
+    func carModelAndMake() -> String {
+        return "\(make) \(model)"
+    }
+    
+    func carDisplayPrice() -> String {
+        let intPrice = Int((customerPrice/1000))
+        return "Price : \(intPrice)k"
+    }
+    
+    func carRating() -> String {
+        var star = "★"
+        let space = " "
+        let spacePlusStar = space + star
+        for _ in 1..<rating {
+            star.append(spacePlusStar)
+        }
+        return star
+    }
+    
+    func carImage() -> UIImage {
+        if make.contains("BMW") {
+            return UIImage(named: "BMW_330i") ?? UIImage()
+        } else if make.contains("Toyota") {
+            return UIImage(named: "Tacoma") ?? UIImage()
+        } else if make.contains("Land") {
+            return UIImage(named: "Range_Rover") ?? UIImage()
+        } else if make.contains("Alpine") {
+            return UIImage(named: "Alpine_roadster") ?? UIImage()
+        } else if make.contains("Mercedes") {
+            return UIImage(named: "Mercedez_benz_GLC") ?? UIImage()
+        } else {
+            return UIImage()
+        }
+    }
 }
+

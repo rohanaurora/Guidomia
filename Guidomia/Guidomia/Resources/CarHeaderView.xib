@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarHeaderView" customModule="Guidomia" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="kB8-ql-Jpw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWD-qP-tgO" userLabel="FilterView">
+                    <rect key="frame" x="0.0" y="400" width="373" height="0.0"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tacoma" translatesAutoresizingMaskIntoConstraints="NO" id="R0Y-a8-HqI">
+                    <rect key="frame" x="0.0" y="0.0" width="373" height="227"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="227" id="JI7-Mw-zHB"/>
+                        <constraint firstAttribute="width" constant="373" id="cao-yN-gwF"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HhX-p2-SHd">
+                    <rect key="frame" x="16" y="247" width="97" height="105.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrZ-dG-9x3">
+                            <rect key="frame" x="0.0" y="0.0" width="46.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Any Make" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ove-0l-wOe">
+                            <rect key="frame" x="0.0" y="28.5" width="91" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Any Model" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fis-18-pgS">
+                            <rect key="frame" x="0.0" y="71.5" width="97" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HhX-p2-SHd" firstAttribute="top" secondItem="R0Y-a8-HqI" secondAttribute="bottom" constant="20" id="Bv0-Gr-YhA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HhX-p2-SHd" secondAttribute="bottom" constant="47.5" id="DsO-UU-irZ"/>
+                <constraint firstItem="R0Y-a8-HqI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GPF-Qa-hcO"/>
+                <constraint firstItem="R0Y-a8-HqI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="STG-ss-78G"/>
+                <constraint firstItem="R0Y-a8-HqI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UId-by-KCG"/>
+                <constraint firstItem="HhX-p2-SHd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Xz1-KE-st4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-0.7246376811594204" y="-1396.875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Tacoma" width="5472" height="3648"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
