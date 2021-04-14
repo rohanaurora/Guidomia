@@ -27,6 +27,8 @@
 		BD5C94CF262654F8007799D3 /* CarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C94CD262654F8007799D3 /* CarHeaderView.swift */; };
 		BD5C94D7262655DB007799D3 /* CarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5C94D6262655DB007799D3 /* CarHeaderView.xib */; };
 		BD5C94D8262655DB007799D3 /* CarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5C94D6262655DB007799D3 /* CarHeaderView.xib */; };
+		BD681FA02627AE000073B01C /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681F9F2627AE000073B01C /* NSAttributedString.swift */; };
+		BD681FA12627AE000073B01C /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681F9F2627AE000073B01C /* NSAttributedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		BD5C94B8262644FA007799D3 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		BD5C94CD262654F8007799D3 /* CarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHeaderView.swift; sourceTree = "<group>"; };
 		BD5C94D6262655DB007799D3 /* CarHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarHeaderView.xib; sourceTree = "<group>"; };
+		BD681F9F2627AE000073B01C /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 				BD0B1AA4262603AF00EEFEF7 /* Resources */,
 				BD0B1AA5262603DD00EEFEF7 /* ViewControllers */,
 				BD0B1A9D2626039F00EEFEF7 /* Model */,
+				BD681FA52627AE040073B01C /* Helpers */,
 			);
 			path = Guidomia;
 			sourceTree = "<group>";
@@ -174,6 +178,14 @@
 				BD5C94CD262654F8007799D3 /* CarHeaderView.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD681FA52627AE040073B01C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD681F9F2627AE000073B01C /* NSAttributedString.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +325,7 @@
 				BD5C94CE262654F8007799D3 /* CarHeaderView.swift in Sources */,
 				BD5C94BA262644FA007799D3 /* CarCell.swift in Sources */,
 				BD5C94A626264229007799D3 /* CarVM.swift in Sources */,
+				BD681FA02627AE000073B01C /* NSAttributedString.swift in Sources */,
 				BD0B1A502625FE1A00EEFEF7 /* MainVC.swift in Sources */,
 				BD0B1A4C2625FE1A00EEFEF7 /* AppDelegate.swift in Sources */,
 				BD0B1A4E2625FE1A00EEFEF7 /* SceneDelegate.swift in Sources */,
@@ -325,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0B1A982626021600EEFEF7 /* Cars.swift in Sources */,
+				BD681FA12627AE000073B01C /* NSAttributedString.swift in Sources */,
 				BD5C94A726264229007799D3 /* CarVM.swift in Sources */,
 				BD5C94CF262654F8007799D3 /* CarHeaderView.swift in Sources */,
 				BD5C94BB262644FA007799D3 /* CarCell.swift in Sources */,

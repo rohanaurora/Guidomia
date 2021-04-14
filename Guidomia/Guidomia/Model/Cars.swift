@@ -46,6 +46,14 @@ struct Cars: Codable {
         return star
     }
     
+    func carProsHide() -> Bool {
+        return prosList.count == 0 ? true: false
+    }
+    
+    func carConsHide() -> Bool {
+        return consList.count == 0 ? true: false
+    }
+
     func carImage() -> UIImage {
         if make.contains("BMW") {
             return UIImage(named: "BMW_330i") ?? UIImage()

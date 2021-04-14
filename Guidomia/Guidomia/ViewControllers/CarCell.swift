@@ -15,6 +15,10 @@ class CarCell: UITableViewCell {
     @IBOutlet weak var carPrice: UILabel!
     @IBOutlet weak var carImageView: UIImageView!
     @IBOutlet var carRating: UILabel!
+    @IBOutlet var proLabel: UILabel!
+    @IBOutlet var conLabel: UILabel!
+    @IBOutlet var proDetails: UILabel!
+    @IBOutlet var conDetails: UILabel!
     
     var car: Cars? {
         didSet { self.displayData() }
@@ -26,8 +30,7 @@ class CarCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        carName.text = nil
-        carPrice.text = nil
+        [carName, carPrice, proDetails, conDetails].forEach({$0?.text = ""})
         carImageView.image = nil
     }
     
@@ -36,5 +39,19 @@ class CarCell: UITableViewCell {
         carPrice.text = car?.carDisplayPrice()
         carImageView.image = car?.carImage()
         carRating.text = car?.carRating()
+        
+        proLabel.isHidden = car?.carProsHide() ?? false
+        conLabel.isHidden = car?.carConsHide() ?? false
+        
+        if !proLabel.isHidden {
+            if let proArray = car?.prosList.filter({ $0.isEmpty == false }) {
+                proDetails.attributedText = NSAttributedString().displayBulletedText(for: proArray)
+            }
+        }
+        if !conLabel.isHidden {
+            if let conArray = car?.consList.filter({ $0.isEmpty == false }) {
+                conDetails.attributedText = NSAttributedString().displayBulletedText(for: conArray)
+            }
+        }
     }
 }
