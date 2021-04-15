@@ -8,12 +8,12 @@
         "rating": 3
     },
     {
-        "consList": ["Sometime explode"],
+        "consList": ["Sometimes explode"],
         "customerPrice": 220000.0,
         "make": "Alpine",
         "marketPrice": 225000.0,
         "model": "Roadster",
-        "prosList": ["This car is so fast", "Jame Bond would love to steal that car", "", ""],
+        "prosList": ["This car is so fast", "James Bond would love to steal that car", "", ""],
         "rating": 4
     },
     {

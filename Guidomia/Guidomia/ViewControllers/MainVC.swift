@@ -15,8 +15,9 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
-        tableView.tableHeaderView = .none
         tableView.automaticallyAdjustsScrollIndicatorInsets = false
+        let nibHeader = UINib(nibName: CarHeaderView.nibName, bundle: nil)
+        self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: CarHeaderView.headerID)
         viewModel = CarVM()
     }
 }
@@ -31,5 +32,18 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let cell:CarCell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as! CarCell
         cell.car = viewModel?.datasource?[indexPath.row]
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 400
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CarHeaderView.headerID)
+        return header
     }
 }

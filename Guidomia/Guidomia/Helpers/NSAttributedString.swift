@@ -22,7 +22,7 @@ extension NSAttributedString {
         var attributes = [NSAttributedString.Key: AnyObject]()
         attributes[.foregroundColor] = UIColor.orange
         attributes[.font] = UIFont.systemFont(ofSize: 18, weight: .heavy)
-        let attributedString = NSAttributedString(string:  "• ", attributes: attributes)
+        let attributedString = NSAttributedString(string:  "•  ", attributes: attributes)
         return attributedString
     }
     
