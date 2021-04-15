@@ -18,7 +18,7 @@ You can run this in your terminal -
 
     git clone https://github.com/rohanaurora/Guidomia.git
     cd Guidomia
-    open `Guidomia.xcodeproj`
+    open Guidomia/Guidomia.xcodeproj
 
 You will have a running version of the Guidomia app by hitting Build > Run on Xcode 12.4 or later.
 
