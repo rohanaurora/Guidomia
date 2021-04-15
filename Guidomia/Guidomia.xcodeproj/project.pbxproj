@@ -29,6 +29,8 @@
 		BD5C94D8262655DB007799D3 /* CarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5C94D6262655DB007799D3 /* CarHeaderView.xib */; };
 		BD681FA02627AE000073B01C /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681F9F2627AE000073B01C /* NSAttributedString.swift */; };
 		BD681FA12627AE000073B01C /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681F9F2627AE000073B01C /* NSAttributedString.swift */; };
+		BD681FB82627CFE70073B01C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681FB72627CFE70073B01C /* Constants.swift */; };
+		BD681FBF2627D2940073B01C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD681FB72627CFE70073B01C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		BD5C94CD262654F8007799D3 /* CarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHeaderView.swift; sourceTree = "<group>"; };
 		BD5C94D6262655DB007799D3 /* CarHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarHeaderView.xib; sourceTree = "<group>"; };
 		BD681F9F2627AE000073B01C /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		BD681FB72627CFE70073B01C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +126,11 @@
 		BD0B1A4A2625FE1A00EEFEF7 /* Guidomia */ = {
 			isa = PBXGroup;
 			children = (
-				BD0B1AA4262603AF00EEFEF7 /* Resources */,
-				BD0B1AA5262603DD00EEFEF7 /* ViewControllers */,
 				BD0B1A9D2626039F00EEFEF7 /* Model */,
+				BD681FB02627CF450073B01C /* ViewModel */,
+				BD681FAC2627CF3F0073B01C /* Views */,
+				BD0B1AA5262603DD00EEFEF7 /* ViewControllers */,
+				BD0B1AA4262603AF00EEFEF7 /* Resources */,
 				BD681FA52627AE040073B01C /* Helpers */,
 			);
 			path = Guidomia;
@@ -163,7 +168,6 @@
 				BD0B1A542625FE1C00EEFEF7 /* Assets.xcassets */,
 				BD0B1A512625FE1A00EEFEF7 /* Main.storyboard */,
 				BD0B1A562625FE1C00EEFEF7 /* LaunchScreen.storyboard */,
-				BD5C94D6262655DB007799D3 /* CarHeaderView.xib */,
 				BD0B1A812625FE9300EEFEF7 /* car_list.json */,
 			);
 			path = Resources;
@@ -172,9 +176,7 @@
 		BD0B1AA5262603DD00EEFEF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD5C94A526264229007799D3 /* CarVM.swift */,
 				BD0B1A4F2625FE1A00EEFEF7 /* MainVC.swift */,
-				BD5C94B8262644FA007799D3 /* CarCell.swift */,
 				BD5C94CD262654F8007799D3 /* CarHeaderView.swift */,
 			);
 			path = ViewControllers;
@@ -184,8 +186,26 @@
 			isa = PBXGroup;
 			children = (
 				BD681F9F2627AE000073B01C /* NSAttributedString.swift */,
+				BD681FB72627CFE70073B01C /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD681FAC2627CF3F0073B01C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C94B8262644FA007799D3 /* CarCell.swift */,
+				BD5C94D6262655DB007799D3 /* CarHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD681FB02627CF450073B01C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD5C94A526264229007799D3 /* CarVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +350,7 @@
 				BD0B1A4C2625FE1A00EEFEF7 /* AppDelegate.swift in Sources */,
 				BD0B1A4E2625FE1A00EEFEF7 /* SceneDelegate.swift in Sources */,
 				BD0B1A972626021600EEFEF7 /* Cars.swift in Sources */,
+				BD681FB82627CFE70073B01C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 				BD681FA12627AE000073B01C /* NSAttributedString.swift in Sources */,
 				BD5C94A726264229007799D3 /* CarVM.swift in Sources */,
 				BD5C94CF262654F8007799D3 /* CarHeaderView.swift in Sources */,
+				BD681FBF2627D2940073B01C /* Constants.swift in Sources */,
 				BD5C94BB262644FA007799D3 /* CarCell.swift in Sources */,
 				BD5C9498262609E3007799D3 /* GuidomiaResponseTests.swift in Sources */,
 			);

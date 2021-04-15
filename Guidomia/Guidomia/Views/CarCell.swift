@@ -20,7 +20,7 @@ class CarCell: UITableViewCell {
     @IBOutlet var proDetails: UILabel!
     @IBOutlet var conDetails: UILabel!
     
-    var car: Cars? {
+    public var car: Cars? {
         didSet { self.displayData() }
     }
     

@@ -28,18 +28,17 @@ struct Cars: Codable {
     var rating: Int
     
     func carModelAndMake() -> String {
-        return "\(make) \(model)"
+        return make + Constants.space + model
     }
     
     func carDisplayPrice() -> String {
         let intPrice = Int((customerPrice/1000))
-        return "Price : \(intPrice)k"
+        return Constants.priceString + String(intPrice) + Constants.thousand
     }
     
     func carRating() -> String {
-        var star = "★"
-        let space = " "
-        let spacePlusStar = space + star
+        var star = Constants.star
+        let spacePlusStar = Constants.space + star
         for _ in 1..<rating {
             star.append(spacePlusStar)
         }
@@ -54,6 +53,7 @@ struct Cars: Codable {
         return consList.count == 0 ? true: false
     }
 
+    // TODO: - Make enum
     func carImage() -> UIImage {
         if make.contains("BMW") {
             return UIImage(named: "BMW_330i") ?? UIImage()

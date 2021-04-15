@@ -11,7 +11,7 @@ final class CarVM {
     public var datasource: [Cars]?
 
     init() {
-        datasource = loadJson(filename: "car_list")
+        datasource = loadJson(filename: Constants.carList)
     }
     
     func loadJson(filename fileName: String) -> [Cars]? {

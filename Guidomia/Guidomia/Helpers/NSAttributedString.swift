@@ -22,7 +22,7 @@ extension NSAttributedString {
         var attributes = [NSAttributedString.Key: AnyObject]()
         attributes[.foregroundColor] = UIColor.orange
         attributes[.font] = UIFont.systemFont(ofSize: 18, weight: .heavy)
-        let attributedString = NSAttributedString(string:  "•  ", attributes: attributes)
+        let attributedString = NSAttributedString(string:  Constants.bulletPointAndSpace, attributes: attributes)
         return attributedString
     }
     
@@ -34,11 +34,11 @@ extension NSAttributedString {
         inputArray.forEach {
             eas.append(bullet)
             eas.append(NSAttributedString(string: $0))
-            eas.append(NSAttributedString(string: "\n"))
+            eas.append(NSAttributedString(string: Constants.nextLine))
         }
         
         let combination = NSMutableAttributedString()
         combination.append(eas)
-        return combination.withLineSpacing(10)
+        return combination.withLineSpacing(Constants.lineSpaceBetweenBullets)
     }
 }

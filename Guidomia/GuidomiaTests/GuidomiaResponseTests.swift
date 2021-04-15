@@ -34,5 +34,4 @@ class GuidomiaTests: XCTestCase {
         XCTAssertNotNil(make)
         XCTAssertTrue(make == "Land Rover")
     }
-
 }

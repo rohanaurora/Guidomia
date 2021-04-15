@@ -14,11 +14,15 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = CarVM()
+        prepareViews()
+    }
+    
+    private func prepareViews() {
         tableView.separatorStyle = .none
         tableView.automaticallyAdjustsScrollIndicatorInsets = false
         let nibHeader = UINib(nibName: CarHeaderView.nibName, bundle: nil)
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: CarHeaderView.headerID)
-        viewModel = CarVM()
     }
 }
 
@@ -39,7 +43,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 400
+        return Constants.headerHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
