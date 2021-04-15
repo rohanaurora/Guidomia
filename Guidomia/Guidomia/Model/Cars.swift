@@ -53,19 +53,20 @@ struct Cars: Codable {
         return consList.count == 0 ? true: false
     }
 
-    // TODO: - Make enum
     func carImage() -> UIImage {
-        if make.contains("BMW") {
-            return UIImage(named: "BMW_330i") ?? UIImage()
-        } else if make.contains("Toyota") {
-            return UIImage(named: "Tacoma") ?? UIImage()
-        } else if make.contains("Land") {
-            return UIImage(named: "Range_Rover") ?? UIImage()
-        } else if make.contains("Alpine") {
-            return UIImage(named: "Alpine_roadster") ?? UIImage()
-        } else if make.contains("Mercedes") {
-            return UIImage(named: "Mercedez_benz_GLC") ?? UIImage()
-        } else {
+        
+        switch CarImages(rawValue: make) {
+        case .bmw :
+            return CarImages.bmw.pngImage
+        case .mercedes:
+            return CarImages.mercedes.pngImage
+        case .rangeRover:
+            return CarImages.rangeRover.pngImage
+        case .alpine:
+            return CarImages.alpine.pngImage
+        case .toyota:
+            return CarImages.toyota.pngImage
+        default:
             return UIImage()
         }
     }
