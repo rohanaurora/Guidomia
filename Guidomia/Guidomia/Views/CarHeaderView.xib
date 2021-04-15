@@ -23,7 +23,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="373" height="227"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="227" id="JI7-Mw-zHB"/>
-                        <constraint firstAttribute="width" constant="373" id="cao-yN-gwF"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-o5-grO">
@@ -91,7 +90,6 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="YqL-o5-grO" firstAttribute="top" secondItem="cQJ-kb-P1g" secondAttribute="bottom" constant="40" id="Bec-OR-dK2"/>
                 <constraint firstItem="R0Y-a8-HqI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GPF-Qa-hcO"/>
@@ -114,9 +112,6 @@
     </objects>
     <resources>
         <image name="Tacoma" width="5472" height="3648"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

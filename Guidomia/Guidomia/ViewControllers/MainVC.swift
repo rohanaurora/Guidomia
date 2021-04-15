@@ -12,6 +12,11 @@ class MainVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel: CarVM?
     
+    lazy var refreshControl: UIRefreshControl = {
+        let rc = UIRefreshControl()
+        return rc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = CarVM()
@@ -21,8 +26,18 @@ class MainVC: UIViewController {
     private func prepareViews() {
         tableView.separatorStyle = .none
         tableView.automaticallyAdjustsScrollIndicatorInsets = false
+        tableView.backgroundColor = .clear
+        
         let nibHeader = UINib(nibName: CarHeaderView.nibName, bundle: nil)
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: CarHeaderView.headerID)
+        
+        refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @IBAction func reloadData() {
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 }
 

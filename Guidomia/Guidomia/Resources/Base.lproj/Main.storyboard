@@ -20,6 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarCell" rowHeight="280" id="cyU-5Y-JRy" customClass="CarCell" customModule="Guidomia" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="280"/>
@@ -150,7 +151,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89794141049999998" green="0.89809560779999997" blue="0.89793163539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CTa-xV-ych" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LKk-BJ-buK"/>
                             <constraint firstAttribute="bottom" secondItem="CTa-xV-ych" secondAttribute="bottom" id="RMO-aw-i3e"/>
